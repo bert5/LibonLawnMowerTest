@@ -10,7 +10,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.lawnmower.libonTest.dto.LawnMowerJsonObject;
 import com.lawnmower.libonTest.service.LawnMowerMovementsService;
+import com.lawnmower.libonTest.utils.AppUtils;
 
 @RestController
 public class LawnMowerApiController {
@@ -31,7 +33,8 @@ public class LawnMowerApiController {
 	
 	@PostMapping("/MovementsInformationsV1")
 	public ResponseEntity<?> getMovingInformations(HttpServletRequest request, HttpServletResponse response){
-		log.info("Can call LawnMowerApiController");
+		String appel = AppUtils.getBody(request);
+		LawnMowerJsonObject lawnMowerJsonObjectSend = AppUtils.deserialiseJsonToEntity(LawnMowerJsonObject.class, appel);
 		lawnMowerMovementsService.executeOrdersFromPayload();
 		return null;
 	}

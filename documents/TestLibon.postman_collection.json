@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "1130bfb9-f3d6-425c-948a-71695f3bf715",
+		"name": "TestLibon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/MovementsInformationsV1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payLoad\": \"5 5\\r\\n1 2 N\\r\\nGAGAGAGAA\\r\\n3 3 E\\r\\nAADAADADDA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/MovementsInformationsV1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"MovementsInformationsV1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
