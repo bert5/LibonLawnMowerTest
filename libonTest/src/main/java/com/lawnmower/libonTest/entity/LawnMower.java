@@ -6,12 +6,14 @@ import org.javatuples.Pair;
 
 public class LawnMower {
 	
+	private String name;
 	private Pair<Integer,Integer> currentPosition;
 	private String orientation;
 	private List<Character> orders;
 	
-	public LawnMower(Pair<Integer, Integer> currentPosition, String orientation, List<Character> orders) {
+	public LawnMower(String name, Pair<Integer, Integer> currentPosition, String orientation, List<Character> orders) {
 		super();
+		this.name = name;
 		this.currentPosition = currentPosition;
 		this.orientation = orientation;
 		this.orders = orders;
@@ -19,6 +21,14 @@ public class LawnMower {
 	
 	public LawnMower() {
 		super();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public Pair<Integer, Integer> getCurrentPosition() {

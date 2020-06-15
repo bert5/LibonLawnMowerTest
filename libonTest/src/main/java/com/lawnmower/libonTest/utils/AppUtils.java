@@ -15,6 +15,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lawnmower.libonTest.dto.LawnMowerJsonObject;
+import com.lawnmower.libonTest.exception.CustomException;
 
 public class AppUtils {
 	
@@ -64,5 +65,4 @@ public class AppUtils {
 			throw e;
 		}
 	}
-
 }
