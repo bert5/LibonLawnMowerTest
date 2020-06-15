@@ -1,0 +1,15 @@
+- Création du repo sur github
+- Mise en place d'une arborescence semblable à celle utilisée dans mes précédents projets ( api, controller, services, dto, entity, etc.)
+- Réalisation du code et méthodes pour réaliser les specs de la tondeuse
+- Création du webservice
+-> je vais me baser sur l'énoncé du test et partir du principe que l'appel est un appel json avec le string suivant
+{
+"payLoad": "5 5\r\n1 2 N\r\nGAGAGAGAA\r\n3 3 E\r\nAADAADADDA"
+}
+qui répondra
+{
+"payLoad": "1 3 N\r\n5 1 E"
+}
+-> Réalisation de tests unitaires (un seul test sur le controller)
+-> Mise en place de log
+-> Mise en place custom exception (précision sur problème dans appel en retour du webservice)

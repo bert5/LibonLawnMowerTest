@@ -1,0 +1,12 @@
+-> Javadoc
+-> Inscrire les logs dans un document externe (*.log)
+-> Eventuellement créer une classe pour centraliser les logs + créer des enumérations d'exception (+ générique)
+-> Revoir le format d'appel Json ainsi que le retour
+-> Ajout du code erreur dans customException + utilisation de la custoException partout
+-> Utilisation accrue de l'héritage
+-> Utilisation regex pour vérifier format appel
+-> Autoriser la présence de + de tondeuse donc + de lignes dans la payload (revoir algo pour parser l'appel Json)
+-> Mise en place d'authentification OAuth2 pour appel web services
+-> Réfléchir à création d'une bdd (postgres ou autre) pour historiser les appels effectués au webservice + création de comptes utilisateurs (au lieu d'une authentification unique
+pour webservice)
+-> Création d'une ihm pour visualiser l'appel et le retour du webservice ? (canvas)

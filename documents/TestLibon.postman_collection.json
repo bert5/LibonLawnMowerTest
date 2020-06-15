@@ -6,13 +6,69 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/MovementsInformationsV1",
+			"name": "TestLimite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payLoad\": \"5 5\\r\\n3 1 S\\r\\nGADADADAAAAAAAAAAGAGADA\\r\\n3 3 E\\r\\nAADAADADDA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/MovementsInformationsV1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"MovementsInformationsV1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestDemande",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"payLoad\": \"5 5\\r\\n1 2 N\\r\\nGAGAGAGAA\\r\\n3 3 E\\r\\nAADAADADDA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/MovementsInformationsV1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"MovementsInformationsV1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestNotOk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payLoad\": \"5 5\\r\\n1 2 N\\r\\nGYGAGAA\\r\\n3 3 E\\r\\nAADAADADDA\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
