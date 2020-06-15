@@ -1,5 +1,7 @@
 package com.lawnmower.libonTest.controller;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -36,7 +38,13 @@ public class LawnMowerApiController {
 		String appel = AppUtils.getBody(request);
 		LawnMowerJsonObject lawnMowerJsonObjectSend = AppUtils.deserialiseJsonToEntity(LawnMowerJsonObject.class, appel);
 		lawnMowerMovementsService.executeOrdersFromPayload();
-		return null;
+		try {
+			AppUtils.sendResponse(response, lawnMowerJsonObjectSend);
+			return ResponseEntity.ok().build();
+		} catch (IOException e) {
+			return ResponseEntity.badRequest().build();
+		}
+		
 	}
 
 }
