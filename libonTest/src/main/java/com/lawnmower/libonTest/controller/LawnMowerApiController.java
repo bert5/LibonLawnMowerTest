@@ -37,7 +37,7 @@ public class LawnMowerApiController {
 	public ResponseEntity<?> getMovingInformations(HttpServletRequest request, HttpServletResponse response){
 		String appel = AppUtils.getBody(request);
 		LawnMowerJsonObject lawnMowerJsonObjectSend = AppUtils.deserialiseJsonToEntity(LawnMowerJsonObject.class, appel);
-		lawnMowerMovementsService.executeOrdersFromPayload();
+		lawnMowerMovementsService.executeOrdersFromPayload(lawnMowerJsonObjectSend);
 		try {
 			AppUtils.sendResponse(response, lawnMowerJsonObjectSend);
 			return ResponseEntity.ok().build();
