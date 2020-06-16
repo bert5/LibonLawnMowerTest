@@ -1,5 +1,7 @@
 -> Javadoc
 -> Inscrire les logs dans un document externe (*.log)
+-> Utilisation d'Optional dans les retour de méthode
+-> Déclarer les string "en dur" dans des final constant
 -> Eventuellement créer une classe pour centraliser les logs + créer des enumérations d'exception (+ générique)
 -> Revoir le format d'appel Json ainsi que le retour
 -> Ajout du code erreur dans customException + utilisation de la custoException partout
